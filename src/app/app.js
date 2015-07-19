@@ -12,7 +12,8 @@ var Position = require('famous/components/Position');
 var MenuPanel = require('./menuPanel.js');
 var LayoutManager = require('./layoutManager.js');
 var MainDisplayPanel = require('./mainDisplayPanel.js');
-//var CategorySelPanel = require('./catSelPanel.js');
+var CatMenuDisplayPanel = require('./catMenuDisplayPanel.js');
+
 
 
 
@@ -33,14 +34,11 @@ function App(scene) {
     this.rootNode.selElement = null;
 
     this.rootNode.setProportionalSize(1,1,1)
-        .setPosition(0,0);
+        .setAlign(0,0);
 
     this.rootWidth = APP_WIDTH ;
     this.rootHeight = APP_HEIGHT;
 
-    //var rootCam = new Camera(scene);
-    //rootCam.setDepth(100000);
-    //rootCam.setFlat();
     this.context = {
       appscene : scene,
       approot  : this
@@ -60,7 +58,7 @@ function App(scene) {
     });
 
     this.rootNode.headerNode = this.rootNode.addChild();
-    this.rootNode.headerNode.setProportionalSize(1,0.1);
+    this.rootNode.headerNode.setProportionalSize(1,0.1).setPosition(0,0,100);
 
     this.headerDIV = new DOMElement(this.rootNode.headerNode, {
        content : "SourceRiver",
@@ -76,7 +74,11 @@ function App(scene) {
     this.rootNode.menuPanel = new MenuPanel(this.rootNode.addChild());
     this.rootNode.mainDisplayPanel = new MainDisplayPanel(this.rootNode.addChild());
 
+    this.rootNode.catSelPanel = new CatMenuDisplayPanel(this.rootNode.addChild());
+
+
     //Add size change component to RootNode
+
     this.rootNode.addComponent({
         id : null,
         node : null,
@@ -96,8 +98,8 @@ function App(scene) {
           APP_WIDTH  = window.innerWidth;
           APP_HEIGHT = window.innerHeight;
 
-          this.node.menuPanel.getParentNode().setPosition(0, LayoutManager.getAppHeaderHeight());
-          this.node.mainDisplayPanel.getParentNode().setPosition(0, LayoutManager.getAppHeaderHeight() + LayoutManager.getAppMenuHeight());
+          //this.node.menuPanel.getParentNode().setPosition(0, LayoutManager.getAppHeaderHeight());
+          //this.node.mainDisplayPanel.getParentNode().setPosition(0, LayoutManager.getAppHeaderHeight() + LayoutManager.getAppMenuHeight());
 
         }
     });

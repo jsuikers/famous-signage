@@ -6,7 +6,8 @@ function MenuPanel(pnode){
 
   this.parentNode = pnode;
 
-  this.parentNode.setProportionalSize(1,0.1).setPosition(0,70);
+  this.parentNode.setProportionalSize(1,0.1).setPosition(0,0,100).setAlign(0,0.1,1);
+  //this.parentNode.setSizeMode(1,1,1).setAbsoluteSize(100,50).setAlign(0,0.1,1);
 
   this.menuDIV = new DOMElement(this.parentNode,{
 
@@ -30,8 +31,8 @@ function _setupMenuPanel(){
   this.parentNode.leftDisplayNode = this.parentNode.addChild();
   this.parentNode.rightDisplayNode = this.parentNode.addChild();
 
-  this.parentNode.leftDisplayNode.setProportionalSize(0.7,1).setPosition(0,0);
-  this.parentNode.rightDisplayNode.setProportionalSize(0.3,1).setPosition(LayoutManager.getAppDimensionWidth() - (LayoutManager.getAppDimensionWidth()*0.3),0);
+  this.parentNode.leftDisplayNode.setProportionalSize(0.7,1).setAlign(0,0,1);
+  this.parentNode.rightDisplayNode.setProportionalSize(0.3,1).setAlign(0.7,0,1);
 
   this.parentNode.leftDisplayDOM = new DOMElement(this.parentNode.leftDisplayNode,{
     content : '<div class="menudisplay">All Categories</div>',

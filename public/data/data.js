@@ -38,7 +38,7 @@ var jobList = {
 	    "Location" : "Bangalore",
 	    "Commitment" : "Fulltime",
       "Category" : "Hotel Mgmt.",
-	    "Code" : "JDS06122",
+	    "Code" : "JDS66122",
     },
     {
       "Title" : "Site Supervisor",
