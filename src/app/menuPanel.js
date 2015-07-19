@@ -18,6 +18,8 @@ function MenuPanel(pnode){
 
   });
 
+  this.parentNode.addUIEvent('click');
+
   _setupMenuPanel.call(this);
 
 }

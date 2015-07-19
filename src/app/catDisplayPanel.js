@@ -32,7 +32,8 @@ function CatDisplayPanel(pnode,pcat){
       '-webkit-box-shadow':'rgb(17, 131, 114) 0px 0px 20px',
       'color' : 'rgb(231, 218, 218)',
       'text-align':'center',
-      'font-size' : '1.5em'
+      'font-size' : '1.5em',
+      'cursor' : 'pointer'
     }
 
   });
