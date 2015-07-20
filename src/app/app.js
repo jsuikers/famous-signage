@@ -71,10 +71,10 @@ function App(scene) {
        }
     });
 
-    this.rootNode.menuPanel = new MenuPanel(this.rootNode.addChild());
+    this.rootNode.menuPanel = new MenuPanel(this.rootNode.addChild(),this.context);
     this.rootNode.mainDisplayPanel = new MainDisplayPanel(this.rootNode.addChild());
 
-    this.rootNode.catSelPanel = new CatMenuDisplayPanel(this.rootNode.addChild());
+    this.rootNode.catSelPanel = new CatMenuDisplayPanel(this.rootNode.addChild(),this.context);
 
 
     //Add size change component to RootNode
@@ -119,12 +119,44 @@ function App(scene) {
 
     this.rootNode.onReceive = function(event,payload){
 
+      console.log(event,payload);
+      if(event==='menuchange'){
+        if(payload == 1){
+          that.activateCatMenu();
+        } else if (payload == 0){
+          that.activateMainDisplay();
+          that.rootNode.menuPanel.changeCaption("All Categories");
+        }
+      } else if(event==='triggercat') {
+        that.activateCatDisplay(payload);
+        that.rootNode.menuPanel.changeCaption(payload);
+      }
 
 
     }
 
 }
 
+App.prototype.activateCatMenu = function(){
+
+  this.rootNode.mainDisplayPanel.halt();
+  this.rootNode.catSelPanel.show();
+
+}
+
+
+App.prototype.activateMainDisplay = function(){
+
+  this.rootNode.mainDisplayPanel.activateMainDisplay();
+
+}
+
+
+App.prototype.activateCatDisplay = function(catname){
+
+  this.rootNode.mainDisplayPanel.activateCatDisplay(catname);
+  this.rootNode.catSelPanel.hide();
+}
 
 
 module.exports = App;

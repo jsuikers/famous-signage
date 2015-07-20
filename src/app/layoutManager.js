@@ -147,7 +147,7 @@ LayoutManager.getCatPanelPosition = function getCatPanelPosition(pSeq){
 
   var YPos =  appLayoutObject.catYOffset + ((rowPos - 1) * appLayoutObject.catInterYOffset) + ((rowPos - 1) * appDimensionObject.catPanelHeight);
 
-  return [XPos , YPos , 200];
+  return [XPos , YPos , 50];
 
 }
 

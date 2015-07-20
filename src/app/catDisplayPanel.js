@@ -15,7 +15,7 @@ var catContentPost = '</span> \
                 </div> \
               </div>';
 
-function CatDisplayPanel(pnode,pcat){
+function CatDisplayPanel(pnode,pcat,pcontext){
 
   this.parentNode = pnode;
 
@@ -37,6 +37,21 @@ function CatDisplayPanel(pnode,pcat){
     }
 
   });
+
+  this.parentNode.context = pcontext;
+
+  this.parentNode.addUIEvent('click');
+
+  this.parentNode.onReceive = function(event,payload){
+
+    if(event==='click'){
+
+      this.context.appscene.emit("triggercat",pcat);
+
+    }
+
+  }
+
 
 }
 
