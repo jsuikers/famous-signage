@@ -39,7 +39,7 @@ function MainDisplayPanel(pnode,pcontext){
   this.panels[2] = new JobDetailsDisplayPanel(this.parentNode.addChild());
   this.panelpos[2] = new Position(this.panels[2].getParentNode());
   this.panelpos[2].setY(0).setX(LayoutManager.getAppDimensionWidth());
-  this.panelpos[2].setZ(2000).setX(LayoutManager.getAppDimensionWidth());
+  this.panelpos[2].setZ(1000).setX(LayoutManager.getAppDimensionWidth());
 
 
 

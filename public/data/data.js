@@ -23,7 +23,7 @@ var jobList = {
     {
       "Title" : "Senior Software Engineer",
 	    "Employer" : "ZigZag Infotech Pvt. Ltd.",
-	    "Job Function Brief" : "Covert business requirements into effective designs and software code and ensuring complete functionality ,testing and deployment ",
+	    "Job Function Brief" : "Convert business requirements into effective designs and software code and ensuring complete functionality ,testing and deployment ",
       "Details" : "Candidate must possess more that 5 years of experience in writing  JAVA code and must have worked on one of the server side JAVA frameworks.",
 	    "Location" : "New Delhi",
 	    "Commitment" : "Fulltime",
@@ -213,7 +213,7 @@ var jobList = {
     {
       "Title" : "Senior Software Engineer",
 	    "Employer" : "Vroom Infotech Pvt. Ltd.",
-	    "Job Function Brief" : "Covert business requirements into effective designs and software code and ensuring complete functionality ,testing and deployment ",
+	    "Job Function Brief" : "Convert business requirements into effective designs and software code and ensuring complete functionality ,testing and deployment ",
       "Details" : "Candidate must possess 3 to 5 years of experience in writing  C++ code.",
 	    "Location" : "Mumbai",
 	    "Commitment" : "Fulltime",
@@ -223,7 +223,7 @@ var jobList = {
     {
       "Title" : "Senior Software Engineer",
 	    "Employer" : "Vroom Infotech Pvt. Ltd.",
-	    "Job Function Brief" : "Covert business requirements into effective designs and software code and ensuring complete functionality ,testing and deployment ",
+	    "Job Function Brief" : "Convert business requirements into effective designs and software code and ensuring complete functionality ,testing and deployment ",
       "Details" : "Candidate must possess 3 to 5 years of experience in writing  C++ code.",
 	    "Location" : "New Delhi",
 	    "Commitment" : "Fulltime",
@@ -233,7 +233,7 @@ var jobList = {
     {
       "Title" : "Software Engineer",
 	    "Employer" : "XYZ Infosystems Pvt. Ltd.",
-	    "Job Function Brief" : "Covert business requirements into effective designs and software code and ensuring complete functionality ,testing and deployment ",
+	    "Job Function Brief" : "Convert business requirements into effective designs and software code and ensuring complete functionality ,testing and deployment ",
       "Details" : "Candidate must possess 1 to 3 years of experience in writing  JAVA code.",
 	    "Location" : "Mumbai",
 	    "Commitment" : "Fulltime",

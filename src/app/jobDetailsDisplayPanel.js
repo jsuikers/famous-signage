@@ -65,11 +65,11 @@ function JobDetailsDisplayPanel(pnode,pcontext){
 
 
   this.parentNode.jobFunctionNode = this.parentNode.addChild();
-  this.parentNode.jobFunctionNode.setProportionalSize(0.9,0.1);
+  this.parentNode.jobFunctionNode.setProportionalSize(0.7,0.1);
   this.parentNode.jobFunctionNode.setAlign(0.05,0.3);
 
   this.parentNode.jobDetailsNode = this.parentNode.addChild();
-  this.parentNode.jobDetailsNode.setProportionalSize(0.9,0.1);
+  this.parentNode.jobDetailsNode.setProportionalSize(0.7,0.1);
   this.parentNode.jobDetailsNode.setAlign(0.05,0.5);
 
   this.parentNode.jobLocationNode = this.parentNode.addChild();
