@@ -33,10 +33,10 @@ CatJobDisplayPanel.prototype.updatePanel = function(catname){
 
   var actualSeq = 0;
 
-  for(var i = 0;i < this.jobPanelArray.length;i++){
+  while(this.jobPanelArray.length > 0){
 
-    this.parentNode.removeChild(this.jobPanelArray[i].getParentNode());
-    this.jobPanelArray.splice(i,1);
+    this.parentNode.removeChild(this.jobPanelArray[0].getParentNode());
+    this.jobPanelArray.splice(0,1);
 
   }
 
@@ -47,11 +47,13 @@ CatJobDisplayPanel.prototype.updatePanel = function(catname){
 
       actualSeq++;
 
-      jobpanel = new JobDisplayPanel(this.parentNode.addChild(),jobList.jobs[i]['Title'] , jobList.jobs[i]['Employer'], jobList.jobs[i]['Code']);
+      jobpanel = new JobDisplayPanel(this.parentNode.addChild(),jobList.jobs[i]['Title'] , jobList.jobs[i]['Employer'], jobList.jobs[i]['Code'],true);
 
       posArray = LayoutManager.getJobPanelPosition(actualSeq);
 
       jobpanel.getParentNode().setPosition(posArray[0],posArray[1],posArray[2]);
+
+      this.jobPanelArray.push(jobpanel);
 
     }
 

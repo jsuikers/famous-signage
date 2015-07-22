@@ -26,7 +26,7 @@ var jobcontentCodePost = '</span> \
                 </div> \
               </div>';
 
-function JobDisplayPanel(pnode,ptitle,pemployer,pcode){
+function JobDisplayPanel(pnode,ptitle,pemployer,pcode,pclickable){
 
   this.parentNode = pnode;
 
@@ -45,6 +45,10 @@ function JobDisplayPanel(pnode,ptitle,pemployer,pcode){
     }
 
   });
+
+  if(pclickable){
+    this.parentNode.el.setProperty('cursor','pointer');
+  }
 
 }
 

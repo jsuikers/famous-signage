@@ -61,7 +61,7 @@ function App(scene) {
     this.rootNode.headerNode.setProportionalSize(1,0.1).setPosition(0,0,100);
 
     this.headerDIV = new DOMElement(this.rootNode.headerNode, {
-       content : "SourceRiver",
+       content : "JobRiver",
        properties:{
          /*'background-color':'rgb(96, 87, 212)',*/
          'background': '-webkit-linear-gradient(left, rgb(36, 48, 151), rgb(142, 142, 217))',
