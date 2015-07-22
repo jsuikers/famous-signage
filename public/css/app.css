@@ -35,6 +35,14 @@
 
 }
 
+.jobparticulars {
+  background-color: rgb(70, 72, 92);
+  border-radius: 10px;
+  color : white;
+  padding: 2px 0px 0px 5px;
+  text-align: left;
+}
+
 .jobemployer {
 
 

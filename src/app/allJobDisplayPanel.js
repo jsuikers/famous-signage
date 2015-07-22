@@ -36,7 +36,7 @@ AllJobDisplayPanel.prototype.drawPanel = function(){
   for(var i = 0; i < jobList.jobs.length;i++){
     console.log(jobList.jobs[i]);
 
-    jobpanel = new JobDisplayPanel(this.parentNode.addChild(),jobList.jobs[i]['Title'] , jobList.jobs[i]['Employer'], jobList.jobs[i]['Code']);
+    jobpanel = new JobDisplayPanel(this.parentNode.addChild(),null,jobList.jobs[i]['Title'] , jobList.jobs[i]['Employer'], jobList.jobs[i]['Code'],false);
 
     posArray = LayoutManager.getJobPanelPosition(i+1);
 

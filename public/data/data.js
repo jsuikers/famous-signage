@@ -3,7 +3,7 @@ var jobList = {
 	  {
 	    "Title" : "Key Accounts Manager",
 	    "Employer" : "Assetz Ltd.",
-	    "Job Function Brief" : "Planning and Managing repationships with major customers ",
+	    "Job Function Brief" : "Planning and Managing relationships with major customers ",
       "Details" : "Prospective candidate should have atleast 10+ years of experience in managing large customer accounts and must possess a track record of maintaining a healthy long term relationship with accounts and maximising sales opportunities within them.",
 	    "Location" : "Bangalore",
 	    "Commitment" : "Fulltime",
@@ -63,7 +63,7 @@ var jobList = {
     {
 	    "Title" : "Accounts Manager",
 	    "Employer" : "Assetz Ltd.",
-	    "Job Function Brief" : "Planning and Managing repationships with major customers ",
+	    "Job Function Brief" : "Planning and Managing relationshipsships with major customers ",
       "Details" : "Prospective candidate should have atleast 5+ years of experience in managing large customer accounts and must possess a track record of maintaining a healthy long term relationship with accounts and maximising sales opportunities within them.",
 	    "Location" : "New Delhi",
 	    "Commitment" : "Fulltime",
@@ -73,7 +73,7 @@ var jobList = {
     {
 	    "Title" : "Junior Accounts Manager",
 	    "Employer" : "Assetz Ltd.",
-	    "Job Function Brief" : "Assisting the key accounts manager in planning and managing repationships with major customers ",
+	    "Job Function Brief" : "Assisting the key accounts manager in planning and managing relationships with major customers ",
       "Details" : "Prospective candidate should have atleast 2+ years of experience in handling customer relationships",
 	    "Location" : "New Delhi",
 	    "Commitment" : "Fulltime",
@@ -83,7 +83,7 @@ var jobList = {
     {
 	    "Title" : "Junior Accounts Manager",
 	    "Employer" : "Biztech Healthcare Ltd.",
-	    "Job Function Brief" : "Assisting the key accounts manager in planning and managing repationships with major customers ",
+	    "Job Function Brief" : "Assisting the key accounts manager in planning and managing relationships with major customers ",
       "Details" : "Prospective candidate should have atleast 2+ years of experience in handling customer relationships",
 	    "Location" : "New Delhi",
 	    "Commitment" : "Fulltime",
@@ -93,7 +93,7 @@ var jobList = {
     {
 	    "Title" : "Junior Accounts Manager",
 	    "Employer" : "Biztech Healthcare Ltd.",
-	    "Job Function Brief" : "Assisting the key accounts manager in planning and managing repationships with major customers ",
+	    "Job Function Brief" : "Assisting the key accounts manager in planning and managing relationships with major customers ",
       "Details" : "Prospective candidate should have atleast 2+ years of experience in handling customer relationships",
 	    "Location" : "Bangalore",
 	    "Commitment" : "Fulltime",
@@ -103,7 +103,7 @@ var jobList = {
     {
 	    "Title" : "Junior Accounts Manager",
 	    "Employer" : "Biztech Healthcare Ltd.",
-	    "Job Function Brief" : "Assisting the key accounts manager in planning and managing repationships with major customers ",
+	    "Job Function Brief" : "Assisting the key accounts manager in planning and managing relationships with major customers ",
       "Details" : "Prospective candidate should have atleast 2+ years of experience in handling customer relationships",
 	    "Location" : "Chennai",
 	    "Commitment" : "Fulltime",

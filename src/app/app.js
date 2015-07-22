@@ -72,9 +72,10 @@ function App(scene) {
     });
 
     this.rootNode.menuPanel = new MenuPanel(this.rootNode.addChild(),this.context);
-    this.rootNode.mainDisplayPanel = new MainDisplayPanel(this.rootNode.addChild());
+    this.rootNode.mainDisplayPanel = new MainDisplayPanel(this.rootNode.addChild(),this.context);
 
     this.rootNode.catSelPanel = new CatMenuDisplayPanel(this.rootNode.addChild(),this.context);
+
 
 
     //Add size change component to RootNode
@@ -130,8 +131,13 @@ function App(scene) {
       } else if(event==='triggercat') {
         that.activateCatDisplay(payload);
         that.rootNode.menuPanel.changeCaption(payload);
-      }
 
+      } else if(event==='jobdetails') {
+        that.activateJobDetailsDisplay(payload);
+
+      } else if(event==='removeoverlay') {
+        that.deactivateJobDetailsDisplay();
+      }
 
     }
 
@@ -157,6 +163,30 @@ App.prototype.activateCatDisplay = function(catname){
   this.rootNode.mainDisplayPanel.activateCatDisplay(catname);
   this.rootNode.catSelPanel.hide();
 }
+
+App.prototype.activateJobDetailsDisplay = function(jobcode){
+
+
+
+  for(var i = 0; i < jobList.jobs.length;i++){
+
+    if(jobList.jobs[i]['Code'] == jobcode){
+
+        this.rootNode.mainDisplayPanel.activateJobDetailsDisplay(jobList.jobs[i]);
+        this.rootNode.menuPanel.setOverlayMode(jobcode);
+        break;
+    }
+
+  }
+
+}
+
+App.prototype.deactivateJobDetailsDisplay = function(){
+
+  this.rootNode.mainDisplayPanel.deactivateJobDetailsDisplay();
+  this.rootNode.menuPanel.unsetOverlayMode();
+}
+
 
 
 module.exports = App;

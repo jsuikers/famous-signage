@@ -3,9 +3,10 @@ var DOMElement = require('famous/dom-renderables/DOMElement');
 var LayoutManager = require('./layoutManager.js');
 var JobDisplayPanel = require('./jobDisplayPanel.js');
 
-function CatJobDisplayPanel(pnode){
+function CatJobDisplayPanel(pnode,pcontext){
 
   this.parentNode = pnode;
+  this.parentNode.context = pcontext;
   this.jobPanelArray = [];
 
 
@@ -47,7 +48,7 @@ CatJobDisplayPanel.prototype.updatePanel = function(catname){
 
       actualSeq++;
 
-      jobpanel = new JobDisplayPanel(this.parentNode.addChild(),jobList.jobs[i]['Title'] , jobList.jobs[i]['Employer'], jobList.jobs[i]['Code'],true);
+      jobpanel = new JobDisplayPanel(this.parentNode.addChild(),this.parentNode.context,jobList.jobs[i]['Title'] , jobList.jobs[i]['Employer'], jobList.jobs[i]['Code'],true);
 
       posArray = LayoutManager.getJobPanelPosition(actualSeq);
 

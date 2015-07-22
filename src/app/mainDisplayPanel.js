@@ -6,14 +6,15 @@ var LayoutManager = require('./layoutManager.js');
 var AllJobDisplayPanel = require('./allJobDisplayPanel.js');
 
 var CatJobDisplayPanel = require('./catJobDisplayPanel.js');
-//var JobDetailsDisplayPanel = require('./jobDetailsDisplayPanel.js');
+var JobDetailsDisplayPanel = require('./jobDetailsDisplayPanel.js');
 
 
-function MainDisplayPanel(pnode){
+function MainDisplayPanel(pnode,pcontext){
 
   var that = this;
 
   this.parentNode = pnode;
+  this.parentNode.context = pcontext;
 
   this.parentNode.setProportionalSize(1,0.8,1).setAlign(0,0.2,-1);
 /*
@@ -31,9 +32,15 @@ function MainDisplayPanel(pnode){
   this.panelpos[0] = new Position(this.panels[0].getParentNode());
   this.panelpos[0].setY(0);
 
-  this.panels[1] = new CatJobDisplayPanel(this.parentNode.addChild());
+  this.panels[1] = new CatJobDisplayPanel(this.parentNode.addChild(),this.parentNode.context);
   this.panelpos[1] = new Position(this.panels[1].getParentNode());
   this.panelpos[1].setY(0).setX(LayoutManager.getAppDimensionWidth());
+
+  this.panels[2] = new JobDetailsDisplayPanel(this.parentNode.addChild());
+  this.panelpos[2] = new Position(this.panels[2].getParentNode());
+  this.panelpos[2].setY(0).setX(LayoutManager.getAppDimensionWidth());
+  this.panelpos[2].setZ(2000).setX(LayoutManager.getAppDimensionWidth());
+
 
 
 
@@ -140,6 +147,24 @@ MainDisplayPanel.prototype.activateMainDisplay = function(catname){
 
 
 }
+
+MainDisplayPanel.prototype.activateJobDetailsDisplay = function(jobdetails){
+
+  this.panels[2].updatePanel(jobdetails);
+  this.panelpos[2].setX(0,{duration:500});
+
+
+}
+
+MainDisplayPanel.prototype.deactivateJobDetailsDisplay = function(){
+
+  //this.panels[2].updatePanel(jobdetails);
+  this.panelpos[2].setX(LayoutManager.getAppDimensionWidth(),{duration:500});
+
+
+}
+
+
 
 
 

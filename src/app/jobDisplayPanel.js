@@ -26,9 +26,11 @@ var jobcontentCodePost = '</span> \
                 </div> \
               </div>';
 
-function JobDisplayPanel(pnode,ptitle,pemployer,pcode,pclickable){
+function JobDisplayPanel(pnode,pcontext,ptitle,pemployer,pcode,pclickable){
 
   this.parentNode = pnode;
+
+  this.parentNode.context = pcontext;
 
   this.parentNode.panelwidth = LayoutManager.getAppJobDisplayWidth();
   this.parentNode.panelheight = LayoutManager.getAppJobDisplayHeight();
@@ -48,6 +50,18 @@ function JobDisplayPanel(pnode,ptitle,pemployer,pcode,pclickable){
 
   if(pclickable){
     this.parentNode.el.setProperty('cursor','pointer');
+    this.parentNode.addUIEvent('click');
+
+    this.parentNode.onReceive = function(e,p){
+
+      if(e==='click'){
+
+        this.context.appscene.emit("jobdetails",pcode);
+
+      }
+
+
+    }
   }
 
 }

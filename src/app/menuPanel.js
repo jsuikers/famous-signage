@@ -21,10 +21,23 @@ function MenuPanel(pnode,pcontext){
   });
 
   this.currMenuState = 0;
+
   /*
   0 - Default State (Displayed as 'Category')
   1 - Category selected state (Displayed as 'Back')
   2 - Job Selected state (Displayed as 'Back')
+  */
+
+  this.overlayMode = false;
+
+  /*
+    Overlay mode indicates that the job details panel is overlayed on the application screen
+    Triggering the back menu in overlayed mode will invoke deactivation of the mode
+  */
+
+  this.overlayModeCaption = '';
+  /*
+  Storage for the caption when overlayed mode is deactivated
   */
 
   _setupMenuPanel.call(this);
@@ -39,9 +52,23 @@ MenuPanel.prototype.changeCaption = function(caption){
 
   this.currMenuState ? this.parentNode.rightDisplayDOM.setContent('<div class="menubutton">Back</div>') : this.parentNode.rightDisplayDOM.setContent('<div class="menubutton">Category</div>');
   this.parentNode.leftDisplayDOM.setContent('<div class="menudisplay">' + caption + '</div>');
+  this.overlayModeCaption = caption;
+}
+
+MenuPanel.prototype.setOverlayMode = function(caption){
+
+    this.overlayMode = true;
+
+    this.parentNode.leftDisplayDOM.setContent('<div class="menudisplay">' + caption + '</div>');
 
 }
 
+MenuPanel.prototype.unsetOverlayMode = function(){
+
+    this.overlayMode = false;
+    this.parentNode.leftDisplayDOM.setContent('<div class="menudisplay">' + this.overlayModeCaption + '</div>');
+
+}
 
 
 
@@ -78,9 +105,18 @@ function _setupMenuPanel(){
 
     if(event==='click'){
 
+      if(that.overlayMode){
+
+        that.context.appscene.emit("removeoverlay");
+
+      } else {
+
         that.currMenuState ? that.currMenuState = 0 : that.currMenuState = 1;
 
         that.currMenuState ? that.context.appscene.emit("menuchange",1) : that.context.appscene.emit("menuchange",0);
+
+      }
+
 
 
 
